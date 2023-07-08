@@ -1,0 +1,22 @@
+{
+  "name": "screep-soc",
+  "version": "0.0.1",
+  "description": "A Screeps AI based on George Orwell's \"1984\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padrezulmiro/screep-soc.git"
+  },
+  "author": "aZul",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/padrezulmiro/screep-soc/issues"
+  },
+  "homepage": "https://github.com/padrezulmiro/screep-soc#readme",
+  "dependencies": {
+    "grunt-screeps": "^1.5.0"
+  }
+}
