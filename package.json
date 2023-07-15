@@ -18,5 +18,9 @@
   "homepage": "https://github.com/padrezulmiro/screep-soc#readme",
   "dependencies": {
     "grunt-screeps": "^1.5.0"
+  },
+  "devDependencies": {
+    "rollup": "^3.26.2",
+    "typescript": "^5.1.6"
   }
 }
