@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                 ptr: config.ptr
             },
             dist: {
-                src: ['compiled/*.js']
+                src: ['dist/*.js']
             }
         }
     });
