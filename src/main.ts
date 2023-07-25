@@ -1,3 +1,5 @@
 function main(): void {
-    console.log("Hello World!");
+    let spawn: StructureSpawn = Game.spawns['Capital'];
+
+
 }
