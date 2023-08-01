@@ -3,3 +3,7 @@ function main(): void {
 
 
 }
+
+function countHarvesters() {
+
+}
