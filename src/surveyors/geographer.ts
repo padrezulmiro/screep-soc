@@ -1,8 +1,9 @@
 export class Geographer {
     private static instance: Geographer
 
-    private DIM: number = 50
-    private roomLayout = []
+    private ROOM_DIMENSION: number = 50
+
+    private roomGeography: RoomGeography = []
 
     private constructor() {}
 
@@ -14,23 +15,37 @@ export class Geographer {
         return Geographer.instance
     }
 
-
-    public surveyRoomTerrain(roomName: string) {
+    public surveyRoomGeography(roomName: string) {
         const room = Game.rooms[roomName]
 
-        let posTerrain = null
-        for (var i = 0; i < this.DIM; ++i) {
-            for (var j = 0; j < this.DIM; ++j) {
-                let posStructAndTerrain = room.lookAt(i, j).filter(
-                    (struct) =>
-                        struct.type == 'structure' || struct.type == 'terrain'
-                )
+        for (var i = 0; i < this.ROOM_DIMENSION; ++i) {
+            this.roomGeography.push([])
 
-                let pos = {
-                    x: i,
-                    y: j
+            for (var j = 0; j < this.ROOM_DIMENSION; ++j) {
+                let pos = room.getPositionAt(i, j)
+                let terrain = room.getTerrain().get(i, j)
+
+                let positionGeography: PositionGeography = {
+                    terrain: terrain,
+                    structures: pos?.lookFor(LOOK_STRUCTURES)
                 }
+
+                this.roomGeography[i].push(positionGeography)
             }
         }
+    }
+
+    // public geographyToString(): string {
+    //     let str = ""
+
+    //     for (const posGeography of this.roomGeography) {
+    //
+    //     }
+
+    //     return str
+    // }
+
+    public getRoomGeography(): RoomGeography {
+        return this.roomGeography
     }
 }
