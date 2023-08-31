@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-    var config = require('./.screeps.json')
+    var config = require('./.screeps.json');
     grunt.loadNpmTasks('grunt-screeps');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -14,30 +14,30 @@ module.exports = function(grunt) {
                 ptr: config.ptr
             },
             dist: {
-                src: ['bin/*.js']
+                src: ['dist/*.js']
             }
         },
 
-        clean: {
-            'dist': ['bin']
-        },
+        // clean: {
+        // 'dist': ['bin']
+        // },
 
-        copy: {
-            screeps: {
-                files: [{
-                    expand: true,
-                    cwd: 'dist/',
-                    src: '**',
-                    dest: 'bin/',
-                    filter: 'isFile',
-                    rename: function (dest, src) {
-                        // Change the path name utilize underscores for folders
-                        return dest + src.replace(/\//g, '_');
-                    }
-                }],
-            }
-        }
+        // copy: {
+        // screeps: {
+        // files: [{
+        // expand: true,
+        // cwd: 'dist/',
+        // src: '**',
+        // dest: 'bin/',
+        // filter: 'isFile',
+        // rename: function (dest, src) {
+        // // Change the path name utilize underscores for folders
+        // return dest + src.replace(/\//g, '_');
+        // }
+        // }],
+        // }
+        // }
     });
 
-    grunt.registerTask('default',  ['clean', 'copy:screeps', 'screeps']);
+    grunt.registerTask('default',  ['screeps']);
 }
