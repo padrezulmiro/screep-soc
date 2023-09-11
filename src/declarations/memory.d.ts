@@ -4,6 +4,6 @@ interface CreepMemory {
 
 interface Memory {
     geography: {
-        "sim": RoomGeography,
+        [key: string]: RoomGeography,
     }
 }
