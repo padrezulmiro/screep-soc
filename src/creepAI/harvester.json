@@ -1,0 +1,11 @@
+{
+  "states": [
+    "IDLE",
+    "HARVEST",
+    "DEPOSIT"
+  ]
+
+  "IDLE": {
+    "name": ""
+  }
+}

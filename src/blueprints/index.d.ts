@@ -4,6 +4,5 @@ type Blueprint = {
 }
 
 type BlueprintSpecs = {
-    harvester: Blueprint,
-    worker: Blueprint,
+    [key: string]: Blueprint
 }

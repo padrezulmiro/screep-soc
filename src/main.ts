@@ -10,14 +10,18 @@ export function loop(): void {
         spawn.assembleBlueprint(blueprintSpecs.harvester)
     }
 
-    if (!Memory.geography) {
-        console.log("Setting geography");
-        let geographer = Geographer.getInstance()
-        geographer.surveyRoomGeography('sim')
+   // if (!Memory.geography) {
+   //     console.log("Setting geography");
+   //     let geographer = Geographer.getInstance()
+   //     geographer.surveyRoomGeography('sim')
 
-        Memory.geography = {
-            "sim": geographer.getRoomGeography()
-        }
+   //     Memory.geography = {
+   //         "sim": geographer.getRoomGeography()
+   //     }
+   // }
+
+    for (const creep in Game.creeps) {
+        // creep.execute()
     }
 }
 

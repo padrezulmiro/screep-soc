@@ -1,11 +1,11 @@
 abstract class Node {
     private _children: Node[] = []
     private _blackboard: Blackboard
-    private _creep: Creep
+    private _tree: Tree
     private _name: string
 
-    constructor(creep: Creep, blackboard: Blackboard, name: string) {
-        this._creep = creep
+    constructor(tree: Tree, blackboard: Blackboard, name: string) {
+        this._tree = tree
         this._blackboard = blackboard
         this._name = name
     }
@@ -20,8 +20,8 @@ abstract class Node {
         return this._blackboard
     }
 
-    get creep(): Creep {
-        return this._creep
+    get tree(): Tree {
+        return this._tree
     }
 
     get name(): string {

@@ -3,3 +3,7 @@ interface StructureSpawn {
 
     assembleBlueprint(blueprint: Blueprint): ScreepsReturnCode
 }
+
+interface Creep {
+    execAction(): void
+}
